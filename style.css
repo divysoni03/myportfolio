@@ -315,10 +315,10 @@ footer .links span{
     .contact-section {
         padding: 0 20px;        
     }
-    .contact-section h2{
+    /* .contact-section h2{
         text-align: center;
         font-size: 22px;
-    }
+    } */
     .contact-section .group {
         flex-direction: column;
     }
@@ -332,6 +332,7 @@ footer .links span{
     }
     footer .text{
         margin-top: 20px;
+        font-size: 14px;
     }
 }
 @media (max-width:600px) {
@@ -364,7 +365,29 @@ footer .links span{
     .skills-section {
         padding: 0 20px;
     }
+    .skills-section h2 {
+        font-size: 30px;
+    }
+    .skills-section .text {
+        font-size: 14px;
+    }
     .skills-section .cells .cell span {
         font-size: 16px;
+    }
+
+    /* SECTION 3: TESTIMONY */
+    .testimony-section h2 {
+        font-size: 30px;
+    }
+    .testimony-section .group .text {
+        font-size: 14px;
+    }
+
+    /* SECTION 4: contact*/
+    .contact-section h2 {
+        font-size: 30px;
+    }
+    .contact-section .group .text {
+        font-size: 14px;
     }
 }
