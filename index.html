@@ -8,16 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="profile.png" type="image/x-icon"/>
+    <link rel="icon" href="bussiness-man.png" type="image/x-icon"/>
     <title>Portfolio</title>
 </head>
 <body>
     <!--NAV BAR-->
-    <nav>
+    <div class="scroll-watcher"></div>
+    <nav id="navbar">
         <div class="left">
             <a href="/myportfolio/">Divy Soni</a>
         </div>
         <div class="right">
+            <a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a>
+            <a href="#testimony"><i class="fa-solid fa-pen"></i><span>Testimony</span></a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
             <a href="http://github.com/divysoni03" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Github</span></a>
 
             <a href="https://www.linkedin.com/in/divysoni03/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>Linkedin</span></a>
@@ -31,7 +35,7 @@
         <div class="text">
             <h2>Hi , I'm Divy, Welcome to my professional portfolio!</h2>
             <p>I am currently pursuing a Bachelor of Technology in Computer Engineering, where I am honing my skills and expanding my knowledge in the ever-evolving field of technology. My academic journey is driven by a profound passion for learning and a relentless curiosity about new innovations and advancements. <br><br> Beyond the classroom, I am an avid reader who enjoys immersing myself in a wide variety of books. This habit not only broadens my horizons but also fuels my creativity. In my leisure time, I love to play games, which I find both stimulating and a great way to relax. <br><br>I consider myself a highly motivated individual, always eager to take on new challenges and acquire new skills. My creative side is often expressed through various projects and hobbies, where I enjoy bringing imaginative ideas to life...</p>
-            <div class="links">
+            <!-- <div class="links">
                 <a href="#skills">
                     <i class="fa-solid fa-code"></i>
                     <span>Skills</span>
@@ -44,7 +48,7 @@
                     <i class="fa-solid fa-envelope"></i>
                     <span>Contact</span>
                 </a>
-            </div>
+            </div> -->
         </div>
         <div class="headshot">
             <img src="profile-pic.png">
@@ -110,7 +114,8 @@
             </form>
         </div>
     </section>
-
+        
+    <a class="scroll-top" href="#navbar"><img src="up-arrow.png" alt="scroll-up"><span>Scroll To Top</span></a>
     <footer>
         <p class="text">
             Thank you for visiting my portfolio. I invite you to explore my projects and experiences, which reflect my dedication to my field and my drive to make a meaningful impact through technology.
