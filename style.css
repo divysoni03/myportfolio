@@ -43,6 +43,68 @@ a {
     }
 }
 /* NAVBAR desktop */
+
+.hamburger-nav {
+    display: none;
+}
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+}
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--background-color);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+}
+.menu-links.open {
+    max-width: 300px;
+}
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
 nav {
     display: flex; /*flex box to seprate them*/
     justify-content: space-between;
@@ -328,8 +390,8 @@ footer .links span{
 
 @media (max-width:600px) {
     /* NAV BAR*/
-    nav{
-        /*changin padding on the side*/
+    /* nav{
+        /*changin padding on the side
         padding: 0px 20px;
     }
     nav .right a{
@@ -340,6 +402,12 @@ footer .links span{
     }
     nav .right a span {
         display: none;
+    } */
+    .navbar{
+        display: none;
+    }
+    .hamburger-nav{
+        display: flex;
     }
 
     /* SECTION 1: PROFILE */

@@ -12,9 +12,11 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <!--NAV BAR-->
+    <!-- scroll-watcher -->
     <div class="scroll-watcher"></div>
-    <nav id="navbar">
+
+    <!--desktop NAV BAR-->
+    <nav class="navbar">
         <div class="left">
             <a href="/myportfolio/">Divy Soni</a>
         </div>
@@ -23,10 +25,31 @@
             <a href="#testimony"><i class="fa-solid fa-pen"></i><span>Testimony</span></a>
             <a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
             <a href="http://github.com/divysoni03" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>Github</span></a>
-
             <a href="https://www.linkedin.com/in/divysoni03/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>Linkedin</span></a>
-
             <a href="mailto:divysoni303@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        </div>
+    </nav>
+
+    <!-- mobile nav bar -->
+    <nav class="hamburger-nav">
+        <div class="left">
+            <a href="/myportfolio/">Divy Soni</a>
+        </div>
+
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <a href="#skills" onclick="toggleMenu()">Skills</a>
+                <a href="#testimony" onclick="toggleMenu()">Testimony</a>
+                <a href="#contact" onclick="toggleMenu()">Contact</a>
+                <a href="http://github.com/divysoni03" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()">Github</a>
+                <a href="https://www.linkedin.com/in/divysoni03/" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()">Linkedin</a>
+                <a href="mailto:divysoni303@gmail.com" onclick="toggleMenu()">Email</a>
+            </div>
         </div>
     </nav>
 
@@ -127,5 +150,6 @@
             <a href=""><i class="fa-brands fa-twitter"></i><span>Twitter</span></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
