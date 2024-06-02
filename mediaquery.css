@@ -1,0 +1,95 @@
+/* responsive media queiry */
+
+@media (max-width:600px) {
+    /* NAV BAR*/
+
+    .desktop-navbar{
+        display: none;
+    }
+    .ham-navbar {
+        display: flex;
+    }
+    .ham-menu {
+        display: flex;
+    }
+    .off-screen-menu {
+        display: flex;
+    }
+
+
+    /* SECTION 1: PROFILE */
+    .profile-section {
+        padding: 0 20px;
+    }
+    .profile-section .text h2 {
+        font-size: 30px;
+    }
+    .profile-section .text p {
+        font-size: 14px;
+    }
+    .profile-section {
+        flex-direction: column-reverse;
+    }
+    .profile-section .headshot img{
+        width: 250px;
+    }
+
+    /* SECTION 2: SKILLS */
+    .skills-section {
+        padding: 0 20px;
+    }
+    .skills-section h2 {
+        font-size: 30px;
+    }
+    .skills-section .text {
+        font-size: 14px;
+    }
+    .skills-section .cells .cell span {
+        font-size: 16px;
+    }
+
+    /* SECTION 3: TESTIMONY */
+    .testimony-section h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+    .testimony-section .group .text {
+        font-size: 14px;
+    }
+    .testimony-section {
+        text-align: center;
+    }
+    .testimony-section .group {
+        flex-direction: column;
+    }
+    
+
+    /* SECTION 4: contact*/
+    .contact-section h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+    .contact-section .group .text {
+        font-size: 14px;
+    }
+    .contact-section {
+        padding: 0 20px;        
+    }
+    .contact-section .group {
+        flex-direction: column;
+    }
+    .contact-section .group .text {
+        text-align: center;
+    }
+    
+    /* FOOTER */
+    footer{
+        height: 350px;
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    footer .text{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}

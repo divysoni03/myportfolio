@@ -1,13 +1,6 @@
 function toggleMenu(){
-    const menu = document.querySelector('.menu-links');
-    const icon = document.querySelector('.hamburger-icon');
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+    const hamMenu = document.querySelector('.ham-menu');
+    const offscreenMenu = document.querySelector('.off-screen-menu');
+    hamMenu.classList.toggle("active");
+    offscreenMenu.classList.toggle("active");
 }
-
-const hamMenu = document.querySelector('.ham-menu');
-const offscreenMenu = document.querySelector('.off-screen-menu');
-hamMenu.addEventListener('click',() =>{
-    hamMenu.classList.toggle('active');
-    offscreenMenu.classList.toggle('active');
-})
