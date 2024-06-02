@@ -81,7 +81,11 @@ a {
     text-align: center;
     font-size: 22px;
     color: var(--text-color);
+    text-decoration: none;
     transition: all 0.3 ease-in-out;
+}
+.menu-links li{
+    text-decoration: none;
 }
 .menu-links.open {
     max-width: 300px;
@@ -403,11 +407,12 @@ footer .links span{
     nav .right a span {
         display: none;
     } */
-    #navbar{
+    nav {
         display: none;
     }
     .hamburger-nav{
         display: flex;
+        padding: 0 20px;
     }
 
     /* SECTION 1: PROFILE */
@@ -452,27 +457,29 @@ footer .links span{
     .testimony-section {
         text-align: center;
     }
+    .testimony-section .group .person-detail p{
+        text-align: center;
+    }
     .testimony-section .group {
         flex-direction: column;
     }
     
 
     /* SECTION 4: contact*/
+    .contact-section {
+        padding: 0 20px;        
+    }
     .contact-section h2 {
         text-align: center;
         font-size: 30px;
     }
     .contact-section .group .text {
+        text-align:left;
         font-size: 14px;
     }
-    .contact-section {
-        padding: 0 20px;        
-    }
+    
     .contact-section .group {
         flex-direction: column;
-    }
-    .contact-section .group .text {
-        text-align: center;
     }
     
     /* FOOTER */
