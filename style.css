@@ -403,7 +403,7 @@ footer .links span{
     nav .right a span {
         display: none;
     } */
-    .navbar{
+    #navbar{
         display: none;
     }
     .hamburger-nav{
