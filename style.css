@@ -354,6 +354,9 @@ a {
 } 
 
 /* scroll to top */
+#mobile-scroll-up {
+    display: none;
+}
 .scroll-top {
     display: flex;
     justify-content: center;

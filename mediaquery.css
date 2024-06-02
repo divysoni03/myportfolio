@@ -82,6 +82,15 @@
         text-align: center;
     }
     
+    /* scroll up */
+    #desktop-scroll-up {
+        display: none;
+    }
+    #mobile-scroll-up {
+        display: flex;
+    }
+
+
     /* FOOTER */
     footer{
         height: 350px;
