@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="bussiness-man.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="mediaquery.css">
     <title>Portfolio</title>
 </head>
 <body>
     <!-- scroll-watcher -->
     <div class="scroll-watcher"></div>
 
-    <!--desktop NAV BAR-->
-    <nav id="navbar" class="desktop-nav">
+    <!-- desktop NAV BAR -->
+    <nav id="navbar" class="desktop-navbar">
         <div class="left">
             <a href="/myportfolio/">Divy Soni</a>
         </div>
@@ -29,29 +30,27 @@
             <a href="mailto:divysoni303@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
         </div>
     </nav>
-
-    <!-- mobile nav bar -->
-    <nav id="navbar" class="hamburger-nav">
+  
+/*mobile hamburger nav bar*/
+    <div class="off-screen-menu" onclick="toggleMenu()">
+        <ul>
+            <li><a href="#skills"><i class="fa-solid fa-code" onclick="toggleMenu()"></i><span>Skills</span></a></li>
+            <li><a href="#testimony"><i class="fa-solid fa-pen" onclick="toggleMenu()"></i><span>Testimony</span></a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope" onclick="toggleMenu()"></i><span>Contact</span></a></li>
+            <li><a href="http://github.com/divysoni03" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()"><i class="fa-brands fa-github"></i><span>Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/divysoni03/" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()"><i class="fa-brands fa-linkedin"></i><span>Linkedin</span></a></li>
+            <li><a href="mailto:divysoni303@gmail.com"><i class="fa-solid fa-envelope" onclick="toggleMenu()"></i><span>Email</span></a></li> 
+        </ul>
+    </div>
+    <nav id="navbar" class="ham-navbar" onclick="toggleMenu()">
         <div class="left">
             <a href="/myportfolio/">Divy Soni</a>
         </div>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
 
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <ul>
-                    <li><a href="#skills" >Skills</a></li>
-                    <li><a href="#testimony" >Testimony</a></li>
-                    <li><a href="#contact" >Contact</a></li>
-                    <li><a href="http://github.com/divysoni03" target="_blank" rel="noopener noreferrer" >Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/divysoni03/" target="_blank" rel="noopener noreferrer" >Linkedin</a></li>
-                    <li><a href="mailto:divysoni303@gmail.com" >Email</a></li>   
-                </ul>
-            </div>
         </div>
     </nav>
 
