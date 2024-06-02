@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /*addes padding and borders to width and height*/
+    text-align: left;
 }
 
 html {
@@ -23,44 +24,128 @@ a {
     color: var(--link-color);
     text-decoration: none;
 }
+/* scroll watcher */
+.scroll-watcher {
+    width: 100%;
+    height: 10px;
+    background-color: var(--link-color);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scrollwatcher linear;
+    animation-timeline: scroll();
+}
+@keyframes  scrollwatcher{
+    to {
+        scale: 1 1;
+    }
+}
+/* NAVBAR desktop */
 
-/* NAVBAR */
+.hamburger-nav {
+    display: none;
+}
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+}
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--background-color);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--text-color);
+    transition: all 0.3 ease-in-out;
+}
+.menu-links.open {
+    max-width: 300px;
+}
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
 
 nav {
     display: flex; /*flex box to seprate them*/
     justify-content: space-between;
     align-items: center; /* align all items in one line*/
-    
     padding: 0px 50px; /* y axis , x axis*/
-    height: 80px;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 60px;
+    background-color: var(--background-color);
+    box-shadow: 0px 1px 1px var(--text-color);
 }
-
 nav .left a{
     color: var(--text-color);
     font-size: 22px;
     font-weight: 600;
 }
-
 nav .right a{
-    color: var(--background-color);
-    background-color: var(--text-color);
-    padding: 5px 15px;
-    border-radius: 5px;
-    
-}
-nav .right a:hover {
-    border: 1px solid black;
-    border-radius: 2px;
+    position: relative;
     color: var(--text-color);
-    background-color: var(--background-color);
-    transition: .3s ease;
+    padding: 0 10px;
+    letter-spacing: 0.5px;
+}
+nav .right a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+}
+nav .right a:hover:after {
+    width: 100%;
 }
 nav .right a span{
     margin-left: 5px;
 }
 
 /* SECTION 1: PROFILE */
-
 .profile-section{
     display: flex;
     justify-content: space-between;
@@ -70,7 +155,6 @@ nav .right a span{
     margin-bottom: 100px;
     gap: 40px;
 }
-
 .profile-section .text {
     flex: 5;
     font-size: 19px;
@@ -121,7 +205,7 @@ nav .right a span{
     font-size: 35px;
 }
 .skills-section .text{
-    text-align: center;
+    text-align: left;
     font-size: 19px;
     margin-bottom: 20px;
 }
@@ -239,12 +323,26 @@ nav .right a span{
     cursor: pointer;
     transition: .1s;
 }
-.contact-section .group form button span{
-    margin-left: 20px;
+.contact-section .group form button{
+    text-align: center;
 }
 .contact-section .group form button:hover{
     filter: brightness(.9);
 } 
+.scroll-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.scroll-top img{
+    width: 50px;
+    height: 50px;
+}
+.scroll-top span{
+    padding-left: 10px;
+}
 
 /* FOOTER */
 footer {
@@ -288,68 +386,30 @@ footer .links span{
     margin-left: 5px;
 }
 
-@media (max-width:850px) {
-    /* section 1 : profile */
-    .profile-section .text h2 {
-        font-size: 35px;
-    }
-}
-@media (max-width:740px) {
-    /* SECTION 1: PROFILE */
-    .profile-section {
-        flex-direction: column-reverse;
-    }
-    .profile-section .headshot img{
-        width: 250px;
-    }
+/* responsive media queiry */
 
-    /* SECTION 3: TESTIMONY */
-    .testimony-section {
-        text-align: center;
-    }
-    .testimony-section .group {
-        flex-direction: column;
-    }
-    
-    /* SECTION 4: CONTACT */
-    .contact-section {
-        padding: 0 20px;        
-    }
-    /* .contact-section h2{
-        text-align: center;
-        font-size: 22px;
-    } */
-    .contact-section .group {
-        flex-direction: column;
-    }
-    .contact-section .group .text {
-        text-align: center;
-    }
-    footer{
-        height: 350px;
-        padding: 0 20px;
-        flex-direction: column;
-    }
-    footer .text{
-        margin-top: 20px;
-        font-size: 14px;
-    }
-}
 @media (max-width:600px) {
     /* NAV BAR*/
-    nav{
-        /*changin padding on the side*/
+    /* nav{
+        /*changin padding on the side
         padding: 0px 20px;
     }
     nav .right a{
-        font-style: 22px;
+        font-size: 22px;
         padding: 3px 9px;
-        color: var(--background-color);
-        background-color: var(--text-color);
+        color: var(--text-color);
+        background-color: var(--background-color);
     }
     nav .right a span {
         display: none;
+    } */
+    .navbar{
+        display: none;
     }
+    .hamburger-nav{
+        display: flex;
+    }
+
     /* SECTION 1: PROFILE */
     .profile-section {
         padding: 0 20px;
@@ -359,6 +419,12 @@ footer .links span{
     }
     .profile-section .text p {
         font-size: 14px;
+    }
+    .profile-section {
+        flex-direction: column-reverse;
+    }
+    .profile-section .headshot img{
+        width: 250px;
     }
 
     /* SECTION 2: SKILLS */
@@ -377,17 +443,46 @@ footer .links span{
 
     /* SECTION 3: TESTIMONY */
     .testimony-section h2 {
+        text-align: center;
         font-size: 30px;
     }
     .testimony-section .group .text {
         font-size: 14px;
     }
+    .testimony-section {
+        text-align: center;
+    }
+    .testimony-section .group {
+        flex-direction: column;
+    }
+    
 
     /* SECTION 4: contact*/
     .contact-section h2 {
+        text-align: center;
         font-size: 30px;
     }
     .contact-section .group .text {
+        font-size: 14px;
+    }
+    .contact-section {
+        padding: 0 20px;        
+    }
+    .contact-section .group {
+        flex-direction: column;
+    }
+    .contact-section .group .text {
+        text-align: center;
+    }
+    
+    /* FOOTER */
+    footer{
+        height: 350px;
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    footer .text{
+        margin-top: 20px;
         font-size: 14px;
     }
 }
