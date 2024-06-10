@@ -73,12 +73,20 @@ a {
 }
 .off-screen-menu ul li a{
     color : var(--text-color);
-    box-shadow: 4px 3px 0px black, -1px -1px 0px black;
+    box-shadow: 3px 3px #000;
+    border: 2px solid #000 !important;
+    border-radius: 3px;
+    transition: all ease-in 0.2s !important;
     opacity: .9;
     padding: 10px 35px;
     display: block;
     margin-bottom: 10px;
-    border-radius: 5px;
+}
+.off-screen-menu ul li a:hover {
+    box-shadow: none;
+    transform: translate(2px,4px) !important;
+    transition: all ease-in 0.2s;
+    opacity: 1 !important;
 }
 .off-screen-menu ul li span{
     margin-left: 7px;
