@@ -441,16 +441,74 @@ a {
     flex: 3;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    background-color: var(--background-color);
+    position: relative;
 }
 .contact-section .group form input,
 .contact-section .group form textarea {
     font-family: 'Poppins',sans-serif;
     border: 2px solid var(--link-color);
-    background-color: transparent;
-    padding: 10px;
     margin-bottom: 15px;
     outline:none;
     resize: none;
+    /* width: 400px; */
+    height: 40px;
+    background:transparent;
+    transition: all .3s ease;
+    padding: 0 15px;
+    z-index:1;
+}
+.contact-section .group form textarea {
+    height: 80px;
+}
+.name,.email,.msg {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: var(--background-color);
+    padding: 0 10px;
+    color: #666;
+    transition: all .3s ease;
+    font-family: 'popins',sans-serif;
+}
+.name {
+    top: 13px;
+    left: 10px;
+}
+.email {
+    top: 68px;
+    left: 10px;
+}
+.msg {
+    top: 123px;
+    left: 10px;
+}
+.contact-section .group form #name:focus + label,
+.contact-section .group form #name:valid + label {
+    font-size: 13px;
+    top: -7px;
+}
+.contact-section .group form #email:focus + label,
+.contact-section .group form #email:valid + label {
+    font-size: 13px;
+    top: 47px;
+}
+.contact-section .group form textarea:focus +label,
+.contact-section .group form textarea:valid +label {
+    font-size: 13px;
+    top: 102px;
+}
+.contact-section .group form input:focus + label,
+.contact-section .group form textarea:focus + label {
+    color: blue;
+}
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus{
+    border-color: blue;
+    outline: 1px solid blue;
 }
 .contact-section .group form button {
     font-size: 16px;
@@ -461,8 +519,6 @@ a {
     border: none;
     cursor: pointer;
     transition: .1s;
-}
-.contact-section .group form button{
     text-align: center;
 }
 .contact-section .group form button:hover{

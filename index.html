@@ -130,9 +130,12 @@
 
             <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="6e55d65a-a8ba-493d-8654-f64ad6f24b80">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email"placeholder="Email" required>
-                <textarea name="message"placeholder="Message"  required></textarea>
+                <input type="text" name="name" id="name" required>
+                <label for="name" class="name">Name</label>
+                <input type="email" name="email" id="email" required>
+                <label for="email" class="email">Email</label>
+                <textarea name="message" id="msg"  required></textarea>
+                <label for="msg" class="msg">Message</label>
                 <button type="submit">Send Message</button>
                 <!-- <button type="submit"><i class="fa-regular fa-paper-plane"></i><span>Send Message</span></button> -->
             </form>
