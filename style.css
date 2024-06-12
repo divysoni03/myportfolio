@@ -22,6 +22,7 @@ html {
 body {
     font-family: 'Poppins',sans-serif;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -308,8 +309,11 @@ a {
 /* SECTION 2 : SKILLS */
 
 .skills-section {
-    padding: 0 50px;
+    padding: 100px 50px;
     margin-bottom: 100px;
+    background-image: url(bg-image/Taieri.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .skills-section h2{
     text-align: center;
@@ -345,6 +349,7 @@ a {
     padding: 10px 20px;
     margin: 10px;
     border: 1.5px solid #d3d3d3;
+    background-color: var(--background-color);
 }
 .skills-section .cells .cell span {
     font-size: 18px;
